@@ -7,42 +7,54 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name = "messages")
-public class Message {
+@Table(name = "tokyo")
+public class Tokyo {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Float id;
 
-    @Column(name = "time", length = 255, nullable = false)
-    private String time;
+    @Column(name = "hour", length = 10, nullable = false)
+    private int hour;
 
-    @Column(name = "destination", length = 255, nullable = false)
+    @Column(name = "min", length = 10, nullable = false)
+    private int min;
+
+    @Column(name = "destination", length = 30, nullable = true)
     private String destination;
 
-    @Column(name = "track", nullable = false)
+    @Column(name = "track", length = 10, nullable = true)
     private String track;
 
 
-
-    public Integer getId() {
+    public Float getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Float id) {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public int getHour() {
+        return hour;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setHour(int hour) {
+        this.hour = hour;
     }
 
-    public String getDestinarion() {
+    public int getMin() {
+        return min;
+    }
+
+    public void setMin(int min) {
+        this.hour = min;
+    }
+
+
+    public String getDestination() {
         return destination;
     }
 
@@ -57,4 +69,6 @@ public class Message {
     public void setTrack(String track) {
         this.track = track;
     }
+
+
 }
