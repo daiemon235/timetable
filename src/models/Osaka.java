@@ -15,16 +15,19 @@ import javax.persistence.Table;
 @Entity
 @NamedQueries({
     @NamedQuery(
-        name = "getTokyo",
-        query = "SELECT m FROM Tokyo AS m ORDER BY m.id ASC"
+        name = "getOsaka",
+        query = "SELECT m FROM Osaka AS m ORDER BY m.id ASC"
     )
 })
-@Table(name = "tokyo")
-public class Tokyo {
+@Table(name = "osaka")
+public class Osaka {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "type", length = 30, nullable = true)
+    private String type;
 
     @Column(name = "time", nullable = false)
     private Time time;
@@ -33,7 +36,13 @@ public class Tokyo {
     private String destination;
 
     @Column(name = "track", length = 10, nullable = true)
-    private String track;
+    private Integer track;
+
+    @Column(name = "remark", length = 50, nullable = true)
+    private String remark;
+
+    @Column(name = "remark2", length = 50, nullable = true)
+    private String remark2;
 
 
     public Integer getId() {
@@ -42,6 +51,14 @@ public class Tokyo {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
 
@@ -62,13 +79,27 @@ public class Tokyo {
         this.destination = destination;
     }
 
-    public String getTrack() {
+    public Integer getTrack() {
         return track;
     }
 
-    public void setTrack(String track) {
+    public void setTrack(Integer track) {
         this.track = track;
     }
 
+    public String getRemark() {
+        return remark;
+    }
 
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public String getRemark2() {
+        return remark2;
+    }
+
+    public void setRemark2(String remark2) {
+        this.remark2 = remark2;
+    }
 }
