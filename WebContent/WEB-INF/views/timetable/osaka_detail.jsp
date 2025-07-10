@@ -11,6 +11,7 @@
         <table class="osaka2">
             <tbody>
                 <tr>
+                    <!-- 「○○時○○分」と表示 -->
                     <th>発車時刻</th>
                     <td><fmt:formatDate value="${osaka.time}" pattern="HH時mm分" /></td>
                 </tr>
@@ -23,6 +24,7 @@
                     <td><c:out value="${osaka.destination}" /></td>
                 </tr>
                 <tr>
+                    <!-- 「○番のりば」と表示 -->
                     <th>のりば</th>
                     <td><c:out value="${osaka.track}" />番のりば</td>
 
@@ -30,6 +32,8 @@
             </tbody>
         </table>
 
+            <!-- "remark" = "注釈" -->
+            <!-- ("途中駅切り離し"や"誤乗防止の案内") -->
         <p>
             <c:out value="${osaka.remark}" />
         </p>

@@ -14,6 +14,7 @@
         <table class="tokyo2">
 
             <tbody>
+                <!-- 山手線の電車はすべて各駅に停車 -->
                 <tr>
                     <th>発車時刻</th>
                     <td><fmt:formatDate value="${tokyo.time}" pattern="HH時mm分" /></td>

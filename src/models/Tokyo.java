@@ -22,18 +22,18 @@ import javax.persistence.Table;
 @Table(name = "tokyo")
 public class Tokyo {
     @Id
-    @Column(name = "id")
+    @Column(name = "id")    // ID (始発列車を"ID=1"として入力)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "time", nullable = false)
-    private Time time;
+    private Time time;      // 発車時刻
 
     @Column(name = "destination", length = 30, nullable = true)
-    private String destination;
+    private String destination; // 行先
 
     @Column(name = "track", length = 10, nullable = true)
-    private String track;
+    private String track;   // 発車番線
 
 
     public Integer getId() {

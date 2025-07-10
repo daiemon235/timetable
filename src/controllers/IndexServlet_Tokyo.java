@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import models.Tokyo;
 import utils.DBUtil;
 
+// 一覧画面（東京駅）
+
 /**
  * Servlet implementation class IndexServlet
  */

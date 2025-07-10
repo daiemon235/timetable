@@ -55,21 +55,25 @@ table {
     table-layout: fixed;
 }
 
+/* 東京駅時刻表（一覧） */
 table.tokyo {
     width: 70%;
     table-layout: fixed;
 }
 
+/* 大阪駅時刻表（一覧） */
 table.osaka {
     width: 70%;
     table-layout: fixed;
 }
 
+/* 東京駅時刻表（詳細） */
 table.tokyo2 {
     width: 70%;
     table-layout: fixed;
 }
 
+/* 大阪駅時刻表（詳細） */
 table.osaka2 {
     width: 70%;
     table-layout: fixed;

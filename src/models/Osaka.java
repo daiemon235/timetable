@@ -22,27 +22,27 @@ import javax.persistence.Table;
 @Table(name = "osaka")
 public class Osaka {
     @Id
-    @Column(name = "id")
+    @Column(name = "id")    // ID (始発列車を"ID=1"として入力)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "type", length = 30, nullable = true)
-    private String type;
+    private String type;    // 種別
 
     @Column(name = "time", nullable = false)
-    private Time time;
+    private Time time;      // 発車時刻
 
     @Column(name = "destination", length = 30, nullable = true)
-    private String destination;
+    private String destination; // 行先
 
     @Column(name = "track", length = 10, nullable = true)
-    private Integer track;
+    private Integer track;      // 発車のりば
 
     @Column(name = "remark", length = 50, nullable = true)
-    private String remark;
+    private String remark;      // 注釈１・・・列車切り離し案内
 
     @Column(name = "remark2", length = 50, nullable = true)
-    private String remark2;
+    private String remark2;     // 注釈２・・・誤乗車防止案内
 
 
     public Integer getId() {

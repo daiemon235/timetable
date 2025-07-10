@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import models.Tokyo;
 import utils.DBUtil;
 
-// 詳細画面の改造
+// 詳細画面（東京駅）
 /**
  * Servlet implementation class ShowServlet
  */
@@ -35,12 +35,12 @@ public class Tokyo_detail extends HttpServlet {
             throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
-        // 該当のIDのメッセージ1件のみをデータベースから取得
+        // 該当のIDの発車時刻1件のみをデータベースから取得
         Tokyo m = em.find(Tokyo.class, Integer.parseInt(request.getParameter("id")));
 
         em.close();
 
-        // メッセージデータをリクエストスコープにセットしてshow.jspを呼び出す
+        // メッセージデータをリクエストスコープにセットしてtokyo_detail.jspを呼び出す
         request.setAttribute("tokyo", m);
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/timetable/tokyo_detail.jsp");

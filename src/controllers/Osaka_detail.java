@@ -14,7 +14,7 @@ import models.Osaka;
 import utils.DBUtil;
 
 
-// 詳細画面の改造
+// 詳細画面（大阪駅）
 /**
  * Servlet implementation class ShowServlet
  */
@@ -35,12 +35,12 @@ public class Osaka_detail extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
-        // 該当のIDのメッセージ1件のみをデータベースから取得
+        // 該当のIDの発車時刻1件のみをデータベースから取得
         Osaka m = em.find(Osaka.class, Integer.parseInt(request.getParameter("id")));
 
         em.close();
 
-        // メッセージデータをリクエストスコープにセットしてshow.jspを呼び出す
+        // メッセージデータをリクエストスコープにセットしてosaka_detail.jspを呼び出す
         request.setAttribute("osaka", m);
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/timetable/osaka_detail.jsp");

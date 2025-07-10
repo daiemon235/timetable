@@ -25,6 +25,7 @@
                         <td><c:out value="${osaka.type}" /></td>
                     <td><fmt:formatDate value="${osaka.time}" pattern="HH:mm" /></td>
                     <td><c:out value="${osaka.destination}" /></td>
+                    <!-- "○番のりば"と表示 -->
                     <td><c:out value="${osaka.track}"/>番のりば</td>
                 </tr>
 
