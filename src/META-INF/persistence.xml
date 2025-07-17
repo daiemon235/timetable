@@ -6,13 +6,14 @@
 		<class>models.Osaka</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/timetable?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;allowPublicKeyRetrieval=true"/>
-			<property name="javax.persistence.schema-generation.database.action" value="create"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql" value="true"/>
-			<property name="javax.persistence.jdbc.user" value="timeuser"/>
-			<property name="javax.persistence.jdbc.password" value="timepass"/>
+			<property name="javax.persistence.jdbc.user" value="csqtlxtobswtptn0"/>
+			<property name="javax.persistence.jdbc.password" value="dr5fft707qtaxe4j"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/s561n112oumq8r79?reconnect=true&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;characterSetResults=utf8"/>
+			<property name="javax.persistence.schema-generation.database.action" value="none"/>
+			<property name="javax.persistence.schema-generation.scripts.action" value="none"/>
 		</properties>
 	</persistence-unit>
 </persistence>
