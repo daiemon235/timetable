@@ -1,0 +1,119 @@
+@CHARSET "UTF-8";
+
+body {
+    color: #333333;
+    font-family: "Hiragino Kaku Gothic Pro", Meiryo, "MS PGothic", Helvetica,
+        Arial, sans-serif;
+}
+
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #333333;
+}
+
+#content {
+    width: 94%;
+    margin-top: 15px;
+    padding-left: 3%;
+}
+
+h1 {
+    width: 94%;
+    padding-top: 17px;
+    padding-left: 3%;
+    font-size: 24px;
+    color: #eeeeee;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #24738e;
+}
+
+table, tr, th, td {
+    border: 1px solid #cccccc;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* 東京駅時刻表（一覧） */
+table.tokyo {
+    width: 70%;
+    table-layout: fixed;
+}
+
+/* 大阪駅時刻表（一覧） */
+table.osaka {
+    width: 70%;
+    table-layout: fixed;
+}
+
+/* 東京駅時刻表（詳細） */
+table.tokyo2 {
+    width: 70%;
+    table-layout: fixed;
+}
+
+/* 大阪駅時刻表（詳細） */
+table.osaka2 {
+    width: 70%;
+    table-layout: fixed;
+}
+
+th {
+    width: 26%;
+    padding: 10px 2%;
+}
+
+th.detail {
+    width: 5px;
+}
+
+th.type {
+    width: 10px;
+}
+
+th.time {
+    width: 5px;
+}
+
+th.destination {
+    width: 12px;
+}
+
+th.track {
+    width: 7px;
+}
+
+td {
+    width: 66%;
+    padding: 10px 2%;
+}
+
+button {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+#footer {
+    text-align: center;
+}
